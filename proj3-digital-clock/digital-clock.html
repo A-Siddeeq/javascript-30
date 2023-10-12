@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+<body class="d-grid align-items-center justify-content-center" style="margin-top: 200px;">
+    
+
+    <main class="border border-rounded text-center bg-dark-subtle p-3">
+        <aside class="m-3 p-2 bg-dark text-light">
+             <h1>Digital Clock</h1>
+        </aside> 
+
+        <aside class="w-100 text-dark p-2">
+            <span class="display-1 fw-bold" id="time"></span><br>
+            <span class=" text-light" id="time">HH:MM:SS</span>
+        </aside>
+
+        <aside class="w-100 bg-info-subtle p-2 fw-bold text">
+            <span id="day"></span>
+        </aside>
+    </main>
+
+    <script>
+
+      let time = document.querySelector('#time')
+      let day = document.querySelector('#day')
+
+      let days = ['Sunday', 'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+
+      function showTime() {
+        let dateTime = new Date()
+        let theTime = dateTime.toLocaleTimeString()
+        let theDay = dateTime.getDay()
+
+        switch(theDay){
+            case 0:
+                day.innerHTML = days[0].toUpperCase()
+                break;
+            case 1:
+                day.innerHTML = days[1].toUpperCase()
+                break;
+            case 2:
+                day.innerHTML = days[2].toUpperCase()
+                break;
+            case 3:
+                day.innerHTML = days[3].toUpperCase()
+                break;
+            case 4:
+                day.innerHTML = days[4].toUpperCase()
+                break;
+            case 5:
+                day.innerHTML = days[5].toUpperCase()
+                break;
+            case 6:
+                day.innerHTML = days[6].toUpperCase()
+                break;
+        }
+
+        time.innerHTML = theTime
+      }
+
+      let display = setInterval(showTime, 1000)
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
