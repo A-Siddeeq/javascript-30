@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+
+    <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Lato, sans-serif;
+        }
+
+        h2{
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+
+        .coming-soon{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .countdown{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .day, .hour, .minute, .second{
+            font-size: 1.5rem;
+        }
+
+        .waiting{
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <section class="coming-soon">
+        <div>
+            <h2>Countdown to launch</h2>
+            <div class="countdown">
+                <div class="container-day">
+                    <h3 class="day">Time</h3>
+                    <h3>Day</h3>
+                </div>
+                <div class="container-hour">
+                    <h3 class="hour">Time</h3>
+                    <h3>Hour</h3>
+                </div>
+                <div class="container-minute">
+                    <h3 class="minute">Time</h3>
+                    <h3>Minute</h3>
+                </div>
+                <div class="container-second">
+                    <h3 class="second">Time</h3>
+                    <h3>Second</h3>
+                </div>
+            </div>
+            <img class="waiting" src="handy-line-calendar.png" alt="">
+        </div>
+    </section>
+
+    <script>
+        
+        const countdown = () => {
+            const countDate = new Date("Jan 1, 2024  00:00:00").getTime()
+            const now = new Date().getTime();
+            const gap = countDate - now;
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            const finalDay = Math.floor(gap/day);
+            const textHour = Math.floor(( gap % day) / hour);
+            const textMinute = Math.floor(( gap % hour) / minute);
+            const textSecond = Math.floor(( gap % minute) / second);
+
+            document.querySelector(".day").innerText = finalDay
+            document.querySelector(".hour").innerText = textHour
+            document.querySelector(".minute").innerText = textMinute
+            document.querySelector(".second").innerText = textSecond
+        }
+        setInterval(countdown, 1000);
+        
+    </script>
+</body>
+</html>
