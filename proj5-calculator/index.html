@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main class="calc">
+
+      <form>
+        <input type="text" name="" id="screen">
+      </form>
+
+    <section class="calcbd">
+        <button class="btn clrAll">AC</button>
+        <button class="btn clr" onclick="remove()">C</button>
+
+        <button class="btn ints num9" data-num="9">9</button>
+        <button class="btn ints num8" data-num="8">8</button>
+        <button class="btn ints num7" data-num="7">7</button>
+        <button class="btn ints num6" data-num="6">6</button>
+        <button class="btn ints num5" data-num="5">5</button>
+        <button class="btn ints num4" data-num="4">4</button>
+        <button class="btn ints num3" data-num="3">3</button>
+        <button class="btn ints num2" data-num="2">2</button>
+        <button class="btn ints num1" data-num="1">1</button>
+        <button class="btn ints num0" data-num="0">0</button>
+
+        <button class="btn ints" data-num="+">+</button>
+        <button class="btn ints" data-num="-">-</button>
+        <button class="btn ints" data-num="/">/</button>
+        <button class="btn ints" data-num="*">*</button>
+
+        <button class="btn ints" data-num=".">.</button>
+        <button class="btn equal">=</button>
+    </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
