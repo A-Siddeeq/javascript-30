@@ -4,29 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>one - 3</title>
+    <title>Background Colour Changer</title>
 </head>
 <body>
-    
-<script>
 
-let body = document.querySelector('body')
-
-let hexCode = '#'
-let code = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
-
-function getRandomCode() {
-   return Math.floor(Math.random() * code.length)
-}
-
-for(let i=0; i<6; i++){
-    hexCode += code[getRandomCode()]
-    body.style.backgroundColor = hexCode
-}
-
-
-
-</script>
+    <div style="
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;">
+    <h1 style="
+        text-align: center;
+        border: 1px solid #000;
+        background-color: #fff;
+        font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;"></h1>
+    </div>
+<script src="script.js"></script>
 
 </body>
 </html>
