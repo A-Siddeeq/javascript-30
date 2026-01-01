@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  font-family: "Courier New", Courier, monospace;
+}
+.clock {
+  background: #ffffff;
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333333;
+}
+@media (max-width: 600px) {
+  .clock {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+  }
+}
