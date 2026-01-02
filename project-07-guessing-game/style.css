@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #f0f0f0;
+  text-align: center;
+  font-family: "Saira", sans-serif;
+}
+.guess-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+}
+.guess-btn {
+  padding: 0.5rem 1.5rem;
+  margin: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.guess-btn:hover {
+  background-color: #0056b3;
+}
+.message {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.reset-btn {
+  padding: 0.5rem 1.5rem;
+  margin: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.reset-btn:hover {
+  background-color: #1e7e34;
+}
+.footer {
+  margin: 1rem;
+  font-size: 0.9rem;
+  color: #666666;
+}
+@media (max-width: 600px) {
+  .guess-input {
+    width: 80px;
+  }
+  .message {
+    font-size: 1rem;
+  }
+}
