@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature Converter (°F to °C)</h1>
+      <p>Enter a temperature in Fahrenheit to convert it to Celsius</p>
+
+      <div class="temp-values">
+        <div class="input-group">
+          <input
+            name="fahrenheit-value"
+            id="fahrenheit-value"
+            type="number"
+            class="temp-input"
+            placeholder="0"
+          />
+          <label for="fahrenheit-value">°F value</label>
+        </div>
+
+        <div class="input-group">
+          <input
+            id="celsius-value"
+            class="result"
+            readonly
+            placeholder="Result"
+          />
+          <label for="celsius-value">°C value</label>
+        </div>
+      </div>
+
+      <div class="footer">JavaScript DOM Manipulation, Event Listeners.</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
